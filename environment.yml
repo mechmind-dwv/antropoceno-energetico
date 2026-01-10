@@ -1,18 +1,17 @@
 name: antropoceno-energetico
 channels:
-
-· conda-forge
-· defaults
-  dependencies:
-· python=3.9
-· numpy
-· pandas
-· xarray
-· netcdf4
-· h5py
-· matplotlib
-· cartopy
-· jupyter
-· pip
-· pip:
-  · -r requirements.txt
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - xarray
+  - netcdf4
+  - h5py
+  - matplotlib
+  - cartopy
+  - jupyter
+  - pip
+  - pip:
+    - -r requirements.txt
