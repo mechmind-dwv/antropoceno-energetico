@@ -1,0 +1,8 @@
+# Ignorar archivos DVC locales
+.dvc/tmp
+.dvc/cache
+.dvc/state
+.dvc/state-journal
+.dvc/state-wal
+.dvc/lock
+.dvc/config.local
