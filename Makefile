@@ -2,12 +2,12 @@
 
 help:
 @echo "Comandos disponibles:"
-@echo "  make install     Instalar dependencias"
-@echo "  make setup       Configurar entorno"
-@echo "  make test        Ejecutar pruebas"
-@echo "  make clean       Limpiar archivos temporales"
-@echo "  make data        Descargar datos de ejemplo"
-@echo "  make docs        Generar documentación"
+@echo " make install Instalar dependencias"
+@echo " make setup Configurar entorno"
+@echo " make test Ejecutar pruebas"
+@echo " make clean Limpiar archivos temporales"
+@echo " make data Descargar datos de ejemplo"
+@echo " make docs Generar documentación"
 
 install:
 pip install -r requirements.txt
