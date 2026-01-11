@@ -1,0 +1,36 @@
+stages:
+  download_era5:
+    cmd: python scripts/download_era5.py --year 2019 --variables 2t,tp
+    deps:
+      - scripts/download_era5.py
+    outs:
+      - Datos/crudos/reanalisis/era5_2019.nc
+    metrics:
+      - Datos/derivados/metrics/download_metrics.json
+
+  process_heat_flux:
+    cmd: python scripts/process_heat_flux.py --input Datos/crudos/edgar
+    deps:
+      - Datos/crudos/edgar
+      - scripts/process_heat_flux.py
+    outs:
+      - Datos/procesados/heat_flux_global.nc
+
+  run_wrf_simulation:
+    cmd: mpirun -np 48 wrf.exe
+    deps:
+      - Datos/procesados/heat_flux_global.nc
+      - config/namelist.input
+    outs:
+      - Experimentos/1_Calor_Residual/output/wrfout_*
+
+  analyze_results:
+    cmd: python scripts/analyze_wrf_output.py
+    deps:
+      - Experimentos/1_Calor_Residual/output
+      - scripts/analyze_wrf_output.py
+    outs:
+      - Resultados/finales/figuras/heat_impact.png
+      - Resultados/finales/tablas/results.csv
+    metrics:
+      - Resultados/finales/metrics/analysis_metrics.json

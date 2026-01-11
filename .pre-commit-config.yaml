@@ -3,13 +3,24 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
+        exclude: ^venv/
       - id: end-of-file-fixer
+        exclude: ^venv/
       - id: check-yaml
       - id: check-added-large-files
-        args: ['--maxkb=10000']
+        args: ['--maxkb=5000']  # Reducir límite a 5MB
+        exclude: ^(Datos/|venv/)  # Excluir datos y entorno virtual
 
   - repo: https://github.com/psf/black
     rev: 24.4.2
     hooks:
       - id: black
         language_version: python3
+        exclude: ^venv/
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+        exclude: ^venv/

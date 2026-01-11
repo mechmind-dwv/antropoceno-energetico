@@ -53,3 +53,18 @@ wheels/
 # Sistema
 .DS_Store
 Thumbs.db
+venv/
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Datos grandes (evitar que DVC los rastree)
+*.nc
+*.h5
+*.zarr
+
+# Configuración personal
+.cdsapirc
+.env
+secrets/
