@@ -2,9 +2,9 @@
 
 ## 🌍 Investigación de Forzamientos Climáticos No-GEI
 
-**Investigador Principal:** Benjamín Cabeza Duran  
-**Email:** ia.mechmind@gmail.com  
-**GitHub:** [@mechmind-dwv](https://github.com/mechmind-dwv)  
+**Investigador Principal:** Benjamín Cabeza Duran
+**Email:** ia.mechmind@gmail.com
+**GitHub:** [@mechmind-dwv](https://github.com/mechmind-dwv)
 **Fecha de Inicio:** Enero 2026
 
 ---

@@ -4,11 +4,12 @@ Script profesional de descarga de ERA5 para el proyecto Antropoceno Energético.
 Autor: Benjamín Cabeza Duran (@mechmind-dwv)
 Uso: python descarga_era5.py --variable temperatura --year 2020
 """
-import cdsapi
 import argparse
-from pathlib import Path
 import logging
 from datetime import datetime
+from pathlib import Path
+
+import cdsapi
 
 # Configurar logging
 logging.basicConfig(

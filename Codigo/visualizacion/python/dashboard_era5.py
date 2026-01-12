@@ -2,14 +2,15 @@
 Dashboard interactivo para análisis ERA5 en Antropoceno Energético
 """
 
-import streamlit as st
-import xarray as xr
-import matplotlib.pyplot as plt
-import plotly.graph_objects as go
-import plotly.express as px
 from pathlib import Path
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import streamlit as st
+import xarray as xr
 
 st.set_page_config(page_title="ERA5 Climate Dashboard", page_icon="🌡️", layout="wide")
 

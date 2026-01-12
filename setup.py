@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -23,7 +23,8 @@ setup(
     ],
     python_requires=">=3.9",
     install_requires=[
-        line.strip() for line in open("requirements.txt").readlines()
+        line.strip()
+        for line in open("requirements.txt").readlines()
         if line.strip() and not line.startswith("#")
     ],
     entry_points={
